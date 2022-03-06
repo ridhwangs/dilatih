@@ -7,7 +7,7 @@
              <div class="col-md-8" style="background-image: url('{!! asset('assets/img/img-instructure.svg') !!}');background-repeat:no-repeat;background-size:100%;background-position:center;">
             </div>
             <div class="col-md-4">
-                <div class="card text-white bg-primary mb-3" style="min-height: 14rem;">
+                <div class="card text-white bg-primary" style="min-height: 14rem;">
                     <div class="card-body">
                         <h5 class="card-title">Meet Our Expert Instructor</h5>
                         <p class="card-text">Belajar langsung dari para ahli terkemuka dunia yang berbakat dalam mengajar</p>
@@ -22,27 +22,38 @@
         </div>
     </section>
     <section class="bg-top py-5"  style="background: url({!! asset('assets/img/bg-instructure.svg') !!}) no-repeat; background-size: cover;">
-      <div class="container">
+        <div class="container text-center">
+            <h2 class="mb-5">Our Instructor</h2>
+        </div>  
+    <div class="container">
         <div class="row pb-5 gy-4">
-            @for($x = 1; $x <= 5; $x++)
-            <div class="col-lg-4 col-md-4">
-                <div class="card mb-3" >
-                    <div class="row g-0">
-                        <div class="col-md-7">
-                        <img src="{!! asset('assets/img/instructure.png') !!}" class="card-img-top"  style="min-height:550px;">
-                        </div>
-                        <div class="col-md-5">
-                        <div class="card-body">
-                            <h5 class="card-title">NickName</h5>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
+             @if(Auth::check())
+            <div class="col-12">
+                <a href="{{ route('instructure.create') }}" class="btn btn-primary col-md-12">New Instructure</a>
+            </div>
+            @endif
+            <div class="container">
+                <div class="row">
+                    @foreach($instruktur AS $key => $rows)
+                    <div class="col-xs-12 col-sm-4 col-md-4 mb-3">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4">
+                                    <img src="{{ asset('storage/image/'.$rows->image) }}" alt="" class="img-thumbnail" />
+                                </div>
+                                <div class="col-sm-6 col-md-8">
+                                    <h4>{{ $rows->nama_instruktur }}</h4>
+                                    <small>{{ $rows->bidang }}</small>
+                                    <p class="mb-0"><a  target="_blank" href="https://www.linkedin.com/in/{{ $rows->linkedin }}"><i class="fa-brands fa-linkedin"></i> {{ $rows->linkedin }}</a></p>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
-            @endfor
-            
+
         </div>
       </div>
     </section>

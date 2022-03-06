@@ -10,6 +10,9 @@
                 <li class="nav-item"><a class="nav-link link-scroll" href="{{ route('training') }}">Training & Certification</a></li>
                 <li class="nav-item"><a class="nav-link link-scroll" href="{{ route('instructure') }}">Our Instructure</a></li>
                 <li class="nav-item"><a class="nav-link link-scroll" href="{{ route('contact') }}">Contact Us</a></li>
+                @if(Auth::check())
+                    <li class="nav-item"><a class="nav-link link-scroll text-white btn btn-danger btn-sm" href="{{ route('actionlogout') }}">Logout</a></li>
+                @endif
             </ul>
             </div>
         </div>
