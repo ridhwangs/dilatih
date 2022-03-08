@@ -12,14 +12,18 @@
                         <h1>Reach Me !</h1>
                         <b>Address</b>
                         <address>
-                            Jalan Jenderal Sudirman km 7, Nomor 14A,
-                            Kelurahan Bunut, Kecamatan Kapuas, Kabupaten Sanggau
+                            
+                            Jl. Bandung Tempo Dulu No.17<br>
+                            Kotabaru Parahyangan <br>
+                            Kabupaten Bandung Barat <br>
+                            Jawa Barat 40553
+                            
                         </address>
 
                         <b>Contact</b>
-                        <p class="mb-0">Mobile : 081234567890</p>
-                        <p class="mb-0">Hotline : (021) 1234 - 5678</p>
-                        <p class="mb-0">Mail : support@dilatih.com</p>
+                        <a href="https://wa.me/083107886622" target="_blank"><p class="mb-0">Mobile : 083107886622</p></a>
+                        <a href="https://www.instagram.com/dilatih.co" target="_blank"><p class="mb-0">Instagram : dilatih.co</p></a>
+                        <a href="mailto:info@dilatih.co" target="_blank"><p class="mb-0">Mail : info@dilatih.co</p></a>
                     </div>
                 </div>
             </div>
@@ -30,27 +34,42 @@
     </section>
     <section class="bg-top py-5"  style="background: url({!! asset('assets/img/banner-1.png') !!}) no-repeat; background-size: cover;">
       <div class="container">
-        <h3 class="h3">Or Just Drop me a line</h3>
-        <form>
-            <div class="mb-3">
-                <label for="name" class="form-label">Name (*)</label>
-                <input type="text" class="form-control" id="name">
+        @if ($message = Session::get('success'))
+        <div class="alert alert-success" role="alert">
+           {{ $message }}
+        </div>
+        @else
+    <h3 class="h3">Or Just Drop me a line</h3>
+        @if($errors->any())
+            {!! implode('', $errors->all('
+            <div class="alert alert-danger" role="alert">
+                :message
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email address (*)</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-                <label for="subject" class="form-label">Subject (*)</label>
-                <input type="text" class="form-control" id="subject" >
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message (*)</label>
-                <textarea class="form-control" id="message" rows="8"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+            ')) !!}
+        @endif
+            <form action="{{ route('contact.store') }}" id="form" method="POST">
+            @csrf
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name (*)</label>
+                    <input type="text" class="form-control" name="name" id="name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address (*)</label>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Subject (*)</label>
+                    <input type="text" class="form-control" name="subject" id="subject" >
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message (*)</label>
+                    <textarea class="form-control" id="message" name="message" rows="8"></textarea>
+                </div>
+                <button type="submit" form="form" class="btn btn-primary">Submit</button>
+            </form>
+        @endif
+        
       </div>
     </section>
 @endsection

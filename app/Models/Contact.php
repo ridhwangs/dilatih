@@ -5,10 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Instruktur extends Model
+class Contact extends Model
 {
     use HasFactory;
-    protected $table = "instruktur";
+    protected $table = "contact";
     public $timestamps = true;
-     
 }

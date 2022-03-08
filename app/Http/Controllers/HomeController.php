@@ -10,7 +10,7 @@ class HomeController extends Controller
     public function index()
     {
         $data = [
-            'kursus' => Kursus::orderBy('id', 'desc')->limit(6)->get(),
+            'kursus' => Kursus::with('instruktur')->orderBy('date_start', 'asc')->limit(6)->get(),
         ];
         return view('home.index', $data);
     }

@@ -23,6 +23,17 @@ class InstructureController extends Controller
         return view('instructure.form');
     }
 
+    public function show(Request $request, $id)
+    {
+        $where = [
+            'kode_instruktur' => $id
+        ];
+        $data = [
+            'detail' => Instruktur::where($where)->first(),
+        ];
+        return view('instructure.show', $data);
+    }
+
     public function store(Request $request)
     {
        $rules = [
@@ -58,4 +69,6 @@ class InstructureController extends Controller
         $create = Instruktur::insert($data);
         return redirect()->route('instructure');
     }
+
+
 }

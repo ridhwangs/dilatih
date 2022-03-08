@@ -1,6 +1,9 @@
 /* your styles go here */
 .card-img-top {
     width: 100%;
-    height: 15vw;
     object-fit: cover;
+}
+
+.addMargin {
+    margin-top: 300px;
 }
