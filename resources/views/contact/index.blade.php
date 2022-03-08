@@ -9,10 +9,9 @@
                 <div class="card border-0 mb-3" >
                     <div class="card-body">
                         <h5 class="card-title">Get Excited Already ?</h5>
-                        <h1>Reach Me !</h1>
+                        <h1 class="text-primary">Reach Me !</h1>
                         <b>Address</b>
                         <address>
-                            
                             Jl. Bandung Tempo Dulu No.17<br>
                             Kotabaru Parahyangan <br>
                             Kabupaten Bandung Barat <br>
@@ -39,7 +38,7 @@
            {{ $message }}
         </div>
         @else
-    <h3 class="h3">Or Just Drop me a line</h3>
+    <h3 class="h3 text-primary">Or Just Drop me a line</h3>
         @if($errors->any())
             {!! implode('', $errors->all('
             <div class="alert alert-danger" role="alert">

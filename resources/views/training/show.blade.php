@@ -6,9 +6,9 @@
       <div class="container py-5">
         <div class="row">
           <div class="col-md-8 mb-4">
-              <div class="card" style="min-height:600px;">
+              <div class="card border-0 rounded-lg" style="min-height:600px;">
                   <div class="card-header bg-white">
-                    <h3 class="text-header">{{ $detail->nama; }}</h3>
+                    <h3 class="text-primary">{{ $detail->nama; }}</h3>
                     <span class="badge bg-primary">{{ $detail->kategori; }}</span>
                   </div>
                   <div class="card-body">
@@ -21,7 +21,7 @@
               </div>
           </div>
           <div class="col">
-             <div class="card sticky-top">
+             <div class="card border-0 rounded-lg sticky-top">
                   <div class="card-body p-0">
                       <ul class="list-group">
                         <li class="list-group-item">

@@ -3,7 +3,7 @@
   <!-- Hero Section-->
   <section class="bg-center pt-5" id="hero" style="background: url({!! asset('assets/img/banner-2.png') !!}) no-repeat;  background-size: cover;">
       <div class="container text-center pt-5">
-        <p class="h3 text-uppercase" data-aos="fade-up">Look for your Online Training Courses</p>
+        <p class="h3 text-uppercase text-primary" data-aos="fade-up">Look for your Online Training Courses</p>
         <div style="background-image: url('{!! asset('assets/img/img-training.svg') !!}');background-repeat:no-repeat;background-size:contain;background-position:center;min-height:18em;" data-aos="zoom-in" data-aos-duration="1000"></div></div> 
   </section>
   <section class="bg-top py-5"  style="background: url({!! asset('assets/img/testimonials-bg.png') !!}) no-repeat; background-size: cover;" >

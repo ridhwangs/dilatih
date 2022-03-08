@@ -5,7 +5,7 @@
         <div class="container py-5">
         <div class="row py-5" >
             <div class="col-lg-5 py-5">
-            <h1 data-aos="zoom-in-right">Complete Your Dream in dilatih.co </h1>
+            <h1 data-aos="zoom-in-right" class="text-primary">Complete Your Dream in dilatih.co </h1>
             <p class="my-4 text-muted" data-aos="zoom-out-up">
                 Learn any program in distance and for a reasonable fee. You don’t have to struggle alone, you’ve got our assistance and
                 help.
@@ -64,7 +64,7 @@
             <div class="row align-items-center mb-5 gy-5">
             <div class="col-lg-6"><img class="img-fluid w-100 px-lg-5" src="{!! asset('assets/img/objects.svg') !!}" data-aos="fade-right" alt=""></div>
             <div class="col-lg-6">
-                <h2 data-aos="zoom-in">Welcome to dilatih.co</h2>
+                <h2 data-aos="zoom-in" class="text-primary">Welcome to dilatih.co</h2>
                 <p class="text-muted" data-aos="zoom-out">	
                   "Kami berjuang untuk membantu orang-orang di Indonesia yang hendak memperdalam suatu bidang kelimuan untuk mencapai cita” nya (dream), membuat mereka merasa dihargai atas kemampuannya dengan memberikan pelatihan yang bernilai tinggi.
                   Kami senantiasa akan bertumbuh dalam komitmen untuk menjaga kualitas, integritas, dinamis dengan perkembangan yang sangat pesat saat ini, dan menggunakan analisis bisnis untuk lebih memahami tren pelanggan.

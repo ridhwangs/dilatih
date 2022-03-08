@@ -32,7 +32,7 @@
                 <div class="row">
                     @foreach($instruktur AS $key => $rows)
                      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-self-stretch mb-3" data-aos="fade-up">
-                        <div class="card" >
+                        <div class="card border-0 shadow rounded-lg">
                             <div class="card-body d-flex flex-column">
                                 <div class="row">
                                     <div class="col-sm-6 col-md-4">
