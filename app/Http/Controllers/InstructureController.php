@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 use App\Models\Instruktur;
+use App\Models\Kursus;
 
 class InstructureController extends Controller
 {
@@ -30,6 +31,7 @@ class InstructureController extends Controller
         ];
         $data = [
             'detail' => Instruktur::where($where)->first(),
+            'kursus' => Kursus::where($where)->orderBy('date_start', 'desc')->paginate(9),
         ];
         return view('instructure.show', $data);
     }

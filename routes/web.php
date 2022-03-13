@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TrainingController;
+use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\InstructureController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LoginController;
@@ -24,9 +25,13 @@ Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actio
 Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
 Route::get('/home', [HomeController::class, 'index']);
+Route::get('/status-link/{keyword}', [HomeController::class, 'status'])->name('status.link');
 
 Route::get('/training-certification', [TrainingController::class, 'index'])->name('training');
+Route::get('/activty', [ActivityController::class, 'index'])->name('activity');
+Route::get('/activty/{slug}', [ActivityController::class, 'show'])->name('activity.detail');
 Route::get('/training/{slug}', [TrainingController::class, 'show'])->name('training.detail');
 Route::get('/training-create', [TrainingController::class, 'create'])->name('training.create')->middleware('auth');
 Route::post('/training-store', [TrainingController::class, 'store'])->name('training.store')->middleware('auth');

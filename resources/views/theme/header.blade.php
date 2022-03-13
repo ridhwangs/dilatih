@@ -8,6 +8,7 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link link-scroll" href="{{ route('home') }}">Home</a></li>
                 <li class="nav-item"><a class="nav-link link-scroll" href="{{ route('training') }}">Training & Certification</a></li>
+                <li class="nav-item"><a class="nav-link link-scroll" href="{{ route('activity') }}">Our Activity</a></li>
                 <li class="nav-item"><a class="nav-link link-scroll" href="{{ route('instructure') }}">Our Instructors</a></li>
                 <li class="nav-item"><a class="nav-link link-scroll" href="{{ route('contact') }}">Contact Us</a></li>
                 @if(Auth::check())

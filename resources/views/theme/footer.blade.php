@@ -12,6 +12,7 @@
             <ul class="list-unstyled d-inline-block me-4 mb-0">
             <li class="mb-2"><a class="footer-link text-white" href="{{ route('home') }}">Home</a></li>
             <li class="mb-2"><a class="footer-link text-white" href="{{ route('training') }}">Training & Certification</a></li>
+            <li class="mb-2"><a class="footer-link text-white" href="{{ route('activity') }}">Our Activity</a></li>
             <li class="mb-2"><a class="footer-link text-white" href="{{ route('instructure') }}">Our Instructors</a></li>
             <li class="mb-2"><a class="footer-link text-white" href="{{ route('contact') }}">Contact Us</a></li>
             </ul>

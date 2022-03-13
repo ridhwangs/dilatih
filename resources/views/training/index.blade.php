@@ -1,5 +1,6 @@
 @extends('theme.default')
 @section('content')
+
   <!-- Hero Section-->
   <section class="bg-center pt-5" id="hero" style="background: url({!! asset('assets/img/banner-2.png') !!}) no-repeat;  background-size: cover;">
       <div class="container text-center pt-5">

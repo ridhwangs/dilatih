@@ -15,7 +15,7 @@ class TrainingController extends Controller
     public function index()
     {
         $data = [
-            'kursus' => Kursus::orderBy('date_start', 'asc')->paginate(16),
+            'kursus' => Kursus::orderBy('date_start', 'asc')->where('status', 1)->paginate(16),
         ];
         return view('training.index', $data);
     }
